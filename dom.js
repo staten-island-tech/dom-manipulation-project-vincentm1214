@@ -1,11 +1,12 @@
 const DOMSelectors = {
     form:document.querySelector("#form"),
-    first:document.querySelector(".first-name"),
-    h2s:document.querySelectorAll("h2"),
-    last:document.querySelector(".last-name"),
+    first:document.querySelector(".full-name"),
+    // h2s:document.querySelectorAll("h2"),
+    question:document.querySelector(".question"),
+    link:document.querySelector(".link")
     //select the textbox
     //select ALL the h2s in one property
-    b
+
 };
 
 DOMSelectors.form.addEventListener("submit",function(event) {
@@ -13,4 +14,7 @@ DOMSelectors.form.addEventListener("submit",function(event) {
     console.log(DOMSelectors.firstName.value);
     DOMSelectors.h2s.forEach((el)=> el.textContent = DOMSelectors.firstName.value
     );
+    document
+    querySelector(".gallery")
+    .insertAdjacent
 });
