@@ -12,13 +12,27 @@ const DOMSelectors = {
 
 };
 
-DOMSelectors.form.addEventListener("submit",function(event) {
-    event.preventDefault();
-    console.log(DOMSelectors.firstName.value);
-    DOMSelectors.h2s.forEach((el)=> el.textContent = DOMSelectors.firstName.value
-    );
-    Document
-    .querySelector(".container")
-    .insertAdjacentHTML()
-});
+const name = {
+    
+}
+
+function name(){
+
+}
+
+
+
+
+// DOMSelectors.form.addEventListener("submit",function(event) {
+//     event.preventDefault();
+//     console.log(DOMSelectors.firstName.value);
+//     DOMSelectors.h2s.forEach((el)=> el.textContent = DOMSelectors.firstName.value
+//     );
+//     Document
+//     .querySelector(".container")
+//     .insertAdjacentHTML(
+//         "afterbegin",
+//         <div class="card"><h2 class="card-title"><div class="card-img"></div></h2></div>
+//     );
+// });
 
