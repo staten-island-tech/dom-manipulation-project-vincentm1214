@@ -1,24 +1,24 @@
-const form=document.querySelector("#form")
-console.log
+// const form=document.querySelector("#form")
+// console.log
 
-const DOMSelectors = {
-    form:document.querySelector("#form"),
-    first:document.querySelector(".full-name"),
-    // h2s:document.querySelectorAll("h2"),
-    question:document.querySelector(".question"),
-    link:document.querySelector(".link")
-    //select the textbox
-    //select ALL the h2s in one property
+// const DOMSelectors = {
+//     form:document.querySelector("#form"),
+//     first:document.querySelector(".full-name"),
+//     // h2s:document.querySelectorAll("h2"),
+//     question:document.querySelector(".question"),
+//     link:document.querySelector(".link")
+//     //select the textbox
+//     //select ALL the h2s in one property
 
-};
+// };
 
-const name = {
+// const name = {
     
-}
+// }
 
-function name(){
+// function name(){
 
-}
+// }
 
 
 
