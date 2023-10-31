@@ -12,6 +12,10 @@ const DOMSelectors = {
 
 };
 
+function background(background){
+background.style.backgroundColor = "red";
+}
+
 DOMSelectors.form.addEventListener("submit",function(event) {
     event.preventDefault();
     console.log(DOMSelectors.firstName.value);
@@ -21,7 +25,7 @@ DOMSelectors.form.addEventListener("submit",function(event) {
     .querySelector(".container")
     .insertAdjacentHTML(
         "afterbegin",
-        <div class="card"><h2 class="card-title"><div class="card-img"></div></h2></div>
+        <div class="card"><h2 class="card-title"><div class="card-img"><h3 class="card-des"></h3></div></h2></div>
     );
 });
 
