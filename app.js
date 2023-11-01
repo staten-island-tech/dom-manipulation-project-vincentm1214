@@ -13,7 +13,7 @@ const DOMSelectors = {
 };
 
 function background(background){
-background.style.backgroundColor = "red";
+document.style.backgroundColor = "red";
 }
 
 DOMSelectors.form.addEventListener("submit",function(event) {
