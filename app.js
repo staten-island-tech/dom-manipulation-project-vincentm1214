@@ -4,9 +4,9 @@ console.log
 const DOMSelectors = {
     form:document.querySelector("#form"),
     first:document.querySelector(".full-name"),
-    // h2s:document.querySelectorAll("h2"),
+    answer:querySelector(".text"),
     question:document.querySelector(".question"),
-    link:document.querySelector(".link")
+    link:document.querySelector(".link"),
     //select the textbox
     //select ALL the h2s in one property
 
@@ -21,11 +21,13 @@ DOMSelectors.form.addEventListener("submit",function(event) {
     console.log(DOMSelectors.firstName.value);
      // DOMSelectors.h2s.forEach((el)=> el.textContent = DOMSelectors.firstName.value
     // );
-    Document
-    .querySelector(".container")
-    .insertAdjacentHTML(
-        "afterbegin",
-        <div class="card"><h2 class="card-title"><div class="card-img"><h3 class="card-des"></h3></div></h2></div>
-    );
+// function card(food) {
+//     DOMSelectors.
+//     .querySelector(".container")
+//     .insertAdjacentHTML(
+//         "afterbegin",
+//         <div class="card">
+//         <h2 class="card-title"><div class="card-img"><h3 class="card-des"></h3></div></h2></div>
+//     );
 });
 
