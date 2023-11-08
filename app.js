@@ -1,33 +1,57 @@
-const form=document.querySelector("#form")
-console.log
-
 const DOMSelectors = {
-    form:document.querySelector("#form"),
-    first:document.querySelector(".full-name"),
-    answer:querySelector(".text"),
-    question:document.querySelector(".question"),
-    link:document.querySelector(".link"),
-    //select the textbox
-    //select ALL the h2s in one property
-
-};
-
-function background(background){
-document.style.backgroundColor = "red";
-}
-
-DOMSelectors.form.addEventListener("submit",function(event) {
+    submitForm: document.querySelector("form"),
+    text: document.querySelector("#text"),
+    box: document.getElementById("food"),
+    input: document.querySelector(`text`),
+    displaySection: document.getElementById("display"),
+    Food: document.getElementById("title"),
+    Description: document.getElementById("des"),
+    URL: document.getElementById("url"),
+  };
+  
+  
+  
+  
+  function card(Food, Description, URL) {
+    DOMSelectors.displaySection.insertAdjacentHTML(
+      "beforeend",
+      `<div class="display-card">
+      <h2 class="display-food">${Food}</h2>
+      <h3 class="display-desc">${Description}</h3>
+        <img class="display-img"
+          src="${URL}"
+        />
+        <br>
+        <button class="remove-btn">Remove Album</button>
+        </br>
+      </div>`
+    );
+  }
+  
+  
+  function clear() {
+    DOMSelectors.Food.value = "";
+    DOMSelectors.Description.value = "";
+    DOMSelectors.URL.value = "";
+  }
+  
+  
+  DOMSelectors.submitForm.addEventListener("submit", function (event) {
+    let Food = DOMSelectors.Food.value;
+    let Description = DOMSelectors.Description.value;
+    let URL = DOMSelectors.URL.value;
+    card(Food, Description, URL);
     event.preventDefault();
-    console.log(DOMSelectors.firstName.value);
-     // DOMSelectors.h2s.forEach((el)=> el.textContent = DOMSelectors.firstName.value
-    // );
-// function card(food) {
-//     DOMSelectors.
-//     .querySelector(".container")
-//     .insertAdjacentHTML(
-//         "afterbegin",
-//         <div class="card">
-//         <h2 class="card-title"><div class="card-img"><h3 class="card-des"></h3></div></h2></div>
-//     );
-});
-
+    clearfields();
+  
+  
+  let removebtn = document.querySelectorAll(".remove-btn");
+  
+  
+    removebtn.forEach((btn) => {
+      btn.addEventListener("click", function (event) {
+        event.target.parentElement.remove();
+      });
+    });
+  });
+  
