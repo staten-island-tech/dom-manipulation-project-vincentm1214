@@ -1,81 +1,62 @@
-html,
 body,
+html,
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-size: 62.5%; 
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
 }
 
 
-.form-parent {
-background-color: pink;
-padding: 8%;
-font-size: 30rem;
-text-align: center;
-}
-
-
-.text-box {
-  padding: 0.5rem;
-  font-size: 2.9rem;
-}
-
-
-.btn {
-font-size: 2.5rem;
-padding: 0.5rem;
-}
-
-
-.display-food{
-margin: auto;
-font-size: 4.5rem;
-padding: 8px 0px 8px 0px;
-}
-
-
-.display-desc{
-  margin: auto;
-  font-size: 4rem;
-  padding: 8px 0px 8px 0px;
-}
-
-
-.display-img{
-  margin: auto;
-  padding: 10px 15px 10px 15px;
-  width: 50rem;
-}
-
-
-.display {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  margin: 3rem auto 3rem auto;
-  width: 90vw;
+body {
+   text-align: center;
+  
 }
 
 
 .display-card {
-background-color: red;
-text-align: center;
-padding: 10px 10px 10px 10px;
-margin: 3rem auto 3rem auto;
-border-radius: 1rem;
+   width: 23%;
+   background-color: #BDECB6;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+   border-radius: 1rem;
+   margin: 20px 15px;
 }
 
 
-.remove-btn {
-    font-size: 2.5rem;
-    margin: 15px auto 15px auto;
-    padding: 0.5rem;
+.display {
+display: flex;
+flex-wrap: wrap;
+width: 92vw;
+margin: 1rem auto;
+align-items: center;
+justify-content: center;
 }
 
 
+.display-img{
+   width: 45%;
+}
 
 
+h1{
+   font-size: 55px;
+   margin: 10px 0px;
+}
+
+
+.name{
+   font-size: 25px;
+}
+
+
+.descrip{
+   font-size: 25px;
+}
+
+
+.url{
+   font-size: 25px;
+}
 

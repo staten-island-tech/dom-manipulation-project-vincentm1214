@@ -1,57 +1,55 @@
 const DOMSelectors = {
-    submitForm: document.querySelector("form"),
-    text: document.querySelector("#text"),
-    box: document.getElementById("food"),
-    input: document.querySelector(`text`),
-    displaySection: document.getElementById("display"),
-    Food: document.getElementById("title"),
-    Description: document.getElementById("des"),
-    URL: document.getElementById("url"),
-  };
-  
-  
-  
-  
-  function card(Food, Description, URL) {
-    DOMSelectors.displaySection.insertAdjacentHTML(
-      "beforeend",
-      `<div class="display-card">
-      <h2 class="display-food">${Food}</h2>
-      <h3 class="display-desc">${Description}</h3>
-        <img class="display-img"
-          src="${URL}"
-        />
-        <br>
-        <button class="remove-btn">Remove Album</button>
-        </br>
-      </div>`
-    );
-  }
-  
-  
-  function clear() {
-    DOMSelectors.Food.value = "";
-    DOMSelectors.Description.value = "";
-    DOMSelectors.URL.value = "";
-  }
-  
-  
-  DOMSelectors.submitForm.addEventListener("submit", function (event) {
-    let Food = DOMSelectors.Food.value;
-    let Description = DOMSelectors.Description.value;
-    let URL = DOMSelectors.URL.value;
-    card(Food, Description, URL);
-    event.preventDefault();
-    clearfields();
-  
-  
-  let removebtn = document.querySelectorAll(".remove-btn");
-  
-  
-    removebtn.forEach((btn) => {
-      btn.addEventListener("click", function (event) {
-        event.target.parentElement.remove();
-      });
-    });
-  });
-  
+  form: document.querySelector("#form"),
+  name: document.querySelector(".name"),
+  description: document.querySelector(".descrip"),
+  url: document.querySelector(".url"),
+  card: document.querySelector("#card"),
+}
+
+DOMSelectors.form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  card();
+  clearfields();
+  removebutton();
+});
+
+function card () {
+  let a = DOMSelectors.name.value;
+  let b = DOMSelectors.description.value;
+  let c = DOMSelectors.url.value;
+  DOMSelectors.card.insertAdjacentHTML("beforeend",
+  `<div class="foods">
+  <h3> name: ${a}</h3>
+  <h3> descrip: ${b}</h3>
+  <h3> url: ${c}</h3>
+  <button class="delete">remove food</button>
+  </div>`);
+};
+// DOMSelectors.card.insertAdjacentHTML(
+//       "beforeend",
+//       `<div class="display-card">
+//       <h2>${foood.name.value}</h2>
+//       <h3>${foood.description.value}</h3> 
+//       <img class="display-img" src="${foood.url}" alt="">
+//       <button class="remove-bn">Remove food</button> </div>`
+//       );
+//}
+
+
+function clearfields () {
+  DOMSelectors.name.value = "";
+  DOMSelectors.description.value = "";
+  DOMSelectors.url.value = "";
+}
+
+
+function removebutton () {
+  let buttons = document.querySelectorAll(".remove-button");
+  buttons.forEach((buttons)=>buttons.addEventListener("click", function (event) {
+      buttons.parentElement.remove();
+  })
+);
+}
+
+
+
