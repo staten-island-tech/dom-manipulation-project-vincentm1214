@@ -1,10 +1,11 @@
 const DOMSelectors = {
   form: document.querySelector("#form"),
   name: document.querySelector(".name"),
-  description: document.querySelector(".descrip"),
+  description: document.querySelector(".description"),
   url: document.querySelector(".url"),
   card: document.querySelector("#card"),
 }
+
 
 DOMSelectors.form.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -13,12 +14,13 @@ DOMSelectors.form.addEventListener("submit", function (event) {
   removebutton();
 });
 
+
 function card () {
   let a = DOMSelectors.name.value;
   let b = DOMSelectors.description.value;
   let c = DOMSelectors.url.value;
   DOMSelectors.card.insertAdjacentHTML("beforeend",
-  `<div class="foods">
+  `<div class="food">
   <h3> name: ${a}</h3>
   <h3> descrip: ${b}</h3>
   <h3> url: ${c}</h3>
@@ -36,11 +38,15 @@ function card () {
 //}
 
 
+
+
 function clearfields () {
   DOMSelectors.name.value = "";
   DOMSelectors.description.value = "";
   DOMSelectors.url.value = "";
 }
+
+
 
 
 function removebutton () {
@@ -50,6 +56,3 @@ function removebutton () {
   })
 );
 }
-
-
-
